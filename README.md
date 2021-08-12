@@ -60,7 +60,7 @@ Finally, the shapefile data converted to WKT via the Databricks notebook was sim
 
 [^fn2]: I found the Integration Runtime somewhat buggy: if you changed any package global parameters and republised them, the ADF runtime would not integrate the change: you had to delete the package and start fresh.
 ### Azure Databricks
-Ideally, most of the ELT, EDA and modeling, would have been accomplished with Azure Databricks principally using Scala, Python and SQL. However, as noted previously, I was unable to configure Databricks successfully to enjoy the full capabilities of Apache Sedona, es[ecially SpatialSQL.
+Ideally, most of the ELT, EDA and modeling, would have been accomplished with Azure Databricks principally using Scala, Python and SQL. However, as noted previously, I was unable to configure Databricks successfully to enjoy the full capabilities of Apache Sedona, especially SpatialSQL.
 What did I use Sedona for? Converting the binary shapefiles into their text representation of WKT that can be consumed by SQL Server Spatial or PostGIS. Python was used for the reading and writing of data using SAS tokens via an Azure Key Store, and Scala + Sedona converted the Shapefiles to WKT. (It would have been so nice to do everything in Databricks and leverage Sedona's horizontal scaling of spatial queries via SpatialSQL).
 Please review the link here for the notebook used.
 ### PostgreSQL for ELT and EDA
