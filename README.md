@@ -6,6 +6,14 @@ My initial exploration of Azure was done with a 'free' 30-day Azure subscription
 I had been working for a small company that was progressively adopting Azure technology for backend systems: Azure Active Directory, Azure DevOps, multiple virtual machines and SQL Databases (along with all the other Microsoft goodness: Office365, Exchange, and Teams). As a data engineer it was an interesting learning experience as to what could be achieved in a regular Microsoft SQL Server instance residing on a VM versus the constraints of a SQL Database (my first analytic SaaS).
 ### Overall Process
 To implement LA research a broader range of data engineering and science technologies is required: BLOB storage for raw data, ELT processes to create 'silver' grade data at rest, Python for EDA (exploratory data analysis) and complex modeling, a unified code repository, and Power BI for presentation.
+```mermaid
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+```
+
 ```flow
 st=>start: Discover Data
 op1=>operation: Load (Un)Structred Data
